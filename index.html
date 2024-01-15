@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choice Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        #choice-container {
+            border: 2px solid #ccc;
+            padding: 20px;
+            max-width: 400px;
+            margin: auto;
+
+        }
+
+        #choice-text {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .choice-button {
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+                       display: block; /* Updated to display block */
+            width: 100%; /* Make buttons full width */
+            font-size: 16px;
+            margin-bottom: 10px; /* Add margin between buttons */
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+        }
+
+        .choice-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="choice-container">
+        <p id="choice-text">เนื่องจากปีนี้ข้าพเจ้าพยายามหาเงินอาจไม่มีเวลาตอบอยู่บ่อยๆ จึงอยากให้สิ่งนี้เป็นเหมือนตัวแทนข้าพเจ้า</p>
+        <p id="choice-text">Choose a qustion:</p>
+        <button class="choice-button" onclick="handleChoice(1)">เอาไงดีกับแฟน</button>
+        <button class="choice-button" onclick="handleChoice(2)">รถไฟชนกันทำไง</button>
+        <button class="choice-button" onclick="handleChoice(3)">ว่างกินข้าวมั้ย</button>
+        <button class="choice-button" onclick="handleChoice(4)">กุว่ากุชอบ น้อง/พี่ เค้าหวะ</button>
+        <button class="choice-button" onclick="handleChoice(5)">ตังเหลือทำไรดี</button>
+        <button class="choice-button" onclick="handleChoice(6)">กุคิดถึงเค้าทำไงดี</button>
+        <button class="choice-button" onclick="handleChoice(7)">เบื่อหวะมึง</button>
+
+        <p id="choice-text">Answer:</p>
+        <p id="chosen-option" href="#"></p>
+    </div>
+
+    <script>
+        function getRandomElement(arr) {
+            var randomIndex = Math.floor(Math.random() * arr.length);
+            return arr[randomIndex];
+        }
+             var set1 = ['ทีมมึงเสมอไงก้ได้', 'เป็นกำลังใจให้เสมอ', 'ไม่เปนไรก้ค่อยๆคุยมีไรรอแสตนบาย'];
+             var set2 = ['ได้เสมอบอกล่วงหน้าซัก3ชม', 'ได้ดิ มึงเลี้ยงนะ' ];
+        var set3 = ['ลุยเลยรอไร', 'ก้ไม่เสียหายก้ลองๆดู', 'ก้ถ้ากังวลเดวให้ยุช่วยสืบประวัติ'];
+        var set4 = ['ช๊อปเลยคนรวยๆอย่างเราๆ', 'โอนให้กุก้ได้', 'มีก้ต้องใช้'];
+        var set5 = ['ไปหาเลยๆ', 'นัดเค้าดิ'];
+        var set6 = ['https://www.checkinchill.com/content/art-gallery-bkk/','https://travel.trueid.net/detail/mo4mb0vVm4LZ'];
+
+        function handleChoice(option) {
+             var result;
+
+            switch (option) {
+                case 1:
+var randomPick = getRandomElement(set1);
+                    result = randomPick;
+                    break;
+                case 2:
+var randomPick = getRandomElement(set1);
+                    result = randomPick;
+                    break;
+                // Add more cases as needed
+                case 3:
+var randomPick = getRandomElement(set2);
+                    result = randomPick;
+                    break;
+               case 4:
+var randomPick = getRandomElement(set3);
+                    result = randomPick;
+                    break;
+case 5:
+var randomPick = getRandomElement(set4);
+                    result = randomPick;
+                    break;
+case 6:
+var randomPick = getRandomElement(set5);
+                    result = randomPick;
+                    break;
+ case 7:
+var randomPick = getRandomElement(set6);
+                    result = randomPick;
+                    break;
+
+                default:
+                    result = 'Invalid option.';
+            }
+
+            document.getElementById('chosen-option').innerText = result;
+        }
+    </script>
+
+</body>
+</html>
